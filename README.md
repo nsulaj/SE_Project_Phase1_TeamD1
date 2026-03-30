@@ -15,23 +15,23 @@ Team Members:
 Project Details
 
 Problem Statement: 
-Tirana provides a variety of sports facilities, such as gyms, football fields, basketball courts, and tennis courts, to encourage students to stay active and maintain a healthy lifestyle. However, despite having these resources, students often face significant challenges when trying to access and use them efficiently.
+Tirana provides a variety of sports facilities, such as gyms, football fields, basketball courts, and tennis courts, to encourage citizens to stay active and maintain a healthy lifestyle. However, despite having these resources, citizens often face significant challenges when trying to access and use them efficiently.
 In many cases, facility availability is not clearly communicated. Reservation processes are often handled manually through administrative staff, paper-based systems, or informal channels like messaging apps and group chats. These outdated methods are not only time-consuming but also prone to errors and miscommunication.
 As a result, several common problems come up:
 •	Double bookings: Multiple students or groups may reserve the same facility at the same time due to lack of a centralized system.
-•	Confusion about availability: Students cannot easily see which time slots are free or already booked, leading to uncertainty and frustration.
+•	Confusion about availability: Citizens cannot easily see which time slots are free or already booked, leading to uncertainty and frustration.
 •	Difficulty managing reservations: Changing or canceling bookings can be complicated, often requiring direct communication with staff.
 •	Lack of organized payment or membership tracking: There is often no clear system for handling payments, tracking memberships, or verifying who is eligible to use certain facilities.
 •	Inefficient use of resources: Facilities may remain underused at certain times while being overcrowded at others due to poor scheduling visibility.
 
 Proposed solution:
-The Sports Facility Booking System addresses these issues by introducing a centralized digital platform. Through this system, students can:
+The Sports Facility Booking System addresses these issues by introducing a centralized digital platform. Through this system, users can:
 •	View real-time availability of all sports facilities.
 •	Make, modify, or cancel reservations from any device.
 •	Receive confirmations and reminders for their bookings.
 •	Access clear information about rules, pricing, and facility usage.
 •	Ensure fair and organized access for all users.
-By digitizing and automating the booking process, the system reduces confusion, minimizes scheduling conflicts, and significantly improves the overall user experience for both students and university staff.
+By digitizing and automating the booking process, the system reduces confusion, minimizes scheduling conflicts, and significantly improves the overall user experience for both citizens and the facility's staff.
 
 Project Scope:
 Aim:
