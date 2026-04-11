@@ -1,0 +1,231 @@
+Phase II: User Requirements and Application Specifications
+Submission Deadline
+12/04/2026 – 23:59 hours
+1. Chosen Development Model
+Development Model: Agile
+The Agile development model is chosen for the Sports Facility Booking System because it provides flexibility, adaptability, and continuous improvement throughout the development process. Agile allows the team to work in small iterations (sprints), where features can be developed, tested, and improved incrementally.
+2. User Requirements
+a. Stakeholders (WHO is involved)
+1. Citizens (End Users)
+Citizens are the primary users of the system. They use the platform to browse facilities, check availability, and make bookings. Their main interest is to have a simple, fast, and reliable booking experience.
+2. Administrators
+Administrators manage the system. They are responsible for managing facilities, schedules, users, and reports. Their goal is to ensure efficient operation and proper organization of the system.
+3. Facility Staff
+Facility staff assist in daily operations. They verify bookings, monitor schedules, and help users if needed. Their interest is to ensure that bookings are valid and facilities are used correctly.
+4. Development Team
+The development team (front-end, back-end, UI/UX designers) is responsible for building and maintaining the system. Their goal is to deliver a functional, secure, and user-friendly application.
+
+b. User Stories (WHAT they need and WHY)
+For Citizens
+As a user, I want to register an account so that I can access the system and make bookings.
+As a user, I want to log in securely so that my personal data is protected.
+As a user, I want to view available sports facilities so that I can choose where to play.
+As a user, I want to check real-time availability so that I can avoid booking conflicts.
+As a user, I want to book a facility so that I can reserve a time slot easily.
+As a user, I want to modify my booking so that I can adjust my schedule if needed.
+As a user, I want to cancel a booking so that I can free the slot if my plans change.
+As a user, I want to receive notifications and reminders so that I do not forget my bookings.
+As a user, I want to view my booking history so that I can track my past and upcoming reservations. 
+For Administrators
+As an admin, I want to add and manage facilities so that the system remains updated.
+As an admin, I want to manage users so that access and permissions are controlled.
+As an admin, I want to view reports and usage statistics so that I can monitor system performance.
+For Facility Staff
+As staff, I want to verify bookings so that only valid users can use the facilities.
+As staff, I want to view daily schedules so that I can manage facility usage efficiently.
+3. Functional Requirements (what the system must do)
+a. Description
+The system must provide the following functionalities:
+The system should allow users to register an account.
+The system should allow users to log in and log out securely.
+The system should display available sports facilities.
+The system should show real-time availability of time slots.
+The system should allow users to book a facility.
+The system should allow users to modify existing bookings.
+The system should allow users to cancel bookings.
+The system should prevent double bookings for the same time slot.
+The system should store and display booking history.
+The system should send booking confirmations.
+The system should allow admins to add new facilities.
+The system should allow admins to edit facility details.
+The system should allow admins to delete facilities.
+The system should allow admins to manage schedules.
+The system should allow admins to view system reports.
+The system should allow admins to manage users.
+The system should support role-based access control (admin, user, staff).
+The system should authenticate users securely.
+The system should send notifications and reminders.
+The system should support optional online payments.
+The system should manage membership plans.
+The system should allow staff to verify bookings.
+The system should allow staff to view daily schedules.
+The system should store all data in a database.
+The system should allow users to search and filter facilities.
+
+b. Acceptance Criteria (When we know it WORKS correctly)
+1. User Login
+User enters valid email and password
+System verifies credentials
+User is redirected to dashboard
+Error message is shown for invalid login
+2. Booking a Facility
+User selects facility and time slot
+System checks availability
+Booking is successfully saved
+Confirmation message is displayed 
+3. Prevent Double Booking
+System checks existing bookings for selected slot
+If slot is already booked, booking is rejected
+Error message is displayed to the user
+4. Modify Booking
+User selects an existing booking
+User updates date/time
+System validates availability
+Booking is updated successfully
+5. Admin Manage Facilities
+Admin can add, edit, or delete a facility
+Changes are saved in the database
+Updated information is visible to users
+4. Non-Functional Requirements (How well the system should work)
+a. Description
+The system should meet the following quality requirements:
+Performance
+The system should load pages quickly.
+The booking process should complete efficiently.
+The system should handle multiple users simultaneously.
+Usability
+The system should be user-friendly.
+The interface should be easy to navigate.
+The system should be responsive on different devices.
+Reliability
+The system should be available most of the time.
+The system should recover from failures.
+The system should ensure data consistency.
+Security
+The system should encrypt user passwords.
+The system should require authentication.
+The system should enforce role-based access control.
+The system should protect user data from unauthorized access.
+Scalability
+The system should support increasing numbers of users.
+The database should scale efficiently.
+Maintainability
+The system should be easy to maintain and update.
+The code should be modular and well-structured.
+Compatibility
+The system should work across different browsers.
+The system should support mobile and desktop devices.
+Data Management
+The system should store data securely.
+The system should perform regular backups.
+Availability
+The system should be accessible at all times.
+System downtime should be minimal.
+Accessibility
+The system should be usable by different user groups.
+The interface should follow accessibility standards. 
+
+b. Acceptance Criteria
+1. Performance (Speed)
+Pages load in less than 2 seconds
+Booking process completes in under 5 seconds
+2. Security
+Passwords are encrypted in the database
+Unauthorized users cannot access restricted areas
+User sessions expire after inactivity
+
+3. Usability
+Users can complete a booking in a maximum of 3 steps
+Interface works properly on mobile and desktop 
+4. Reliability
+System uptime is at least 99%
+No data loss occurs during booking operations 
+5. Compatibility
+System works on Chrome, Firefox, and Edge
+System displays correctly on mobile devices 
+
+5. Application Specifications (How the system is built technically)
+a. Architecture
+The Sports Facility Booking System follows a three-tier architecture, which separates the system into three main layers:
+Frontend (Presentation Layer):
+ The frontend is responsible for the user interface and user interactions. It includes pages such as login/register, facility browsing, booking page, and admin dashboard. Users interact with the system through this layer.
+Backend (Application Layer):
+ The backend handles the business logic of the system. It processes user requests, manages booking logic (such as checking availability and preventing double bookings), handles authentication, and communicates with the database.
+Database (Data Layer):
+ The database stores all system data, including users, facilities, bookings, and payments. It ensures data consistency, integrity, and efficient retrieval.
+The frontend sends requests to the backend via APIs. The backend processes the requests and interacts with the database, then sends responses back to the frontend.
+b. Database Model
+The system uses a relational database with the following main tables:
+1. Users Table
+user_id (Primary Key)
+name
+email (Unique)
+password (Encrypted)
+role (admin, user, staff)
+2. Facilities Table
+facility_id (Primary Key)
+name
+type (gym, football field, etc.)
+location
+description
+price
+3. Bookings Table
+booking_id (Primary Key)
+user_id (Foreign Key → Users)
+facility_id (Foreign Key → Facilities)
+date
+time_slot
+status (active, cancelled)
+4. Payments Table 
+payment_id (Primary Key)
+booking_id (Foreign Key → Bookings)
+amount
+payment_status
+Relationships
+One user can have multiple bookings
+One facility can have multiple bookings
+Each booking belongs to one user and one facility
+Each payment is linked to one booking
+Constraints
+Email must be unique
+A booking must reference valid user and facility IDs
+Double booking for the same time slot is not allowed 
+
+c. Technologies Used
+The system is developed using the following technologies:
+Frontend: HTML, CSS, JavaScript
+ → Used for creating a responsive and user-friendly interface
+Backend: Java 
+ → Used to handle business logic, APIs, and system operations
+Database: MySQL
+ → Used for structured data storage and efficient querying
+Development Tools: IntelliJ IDEA, GitHub
+ → IntelliJ for coding and development, GitHub for version control and collaboration
+These technologies were selected for their reliability, scalability, and ease of integration.
+
+d. User Interface Design
+The system interface is designed to be simple, clean, and user-friendly. The main screens include:
+Login/Register Page:
+ Allows users to create accounts and log in securely
+Home Page / Facility Browsing Page:
+ Displays available sports facilities with filtering options
+Booking Page:
+ Allows users to select a facility, date, and time slot and make reservations
+User Dashboard:
+ Shows booking history, upcoming reservations, and options to modify or cancel bookings
+Admin Dashboard:
+ Allows administrators to manage facilities, users, schedules, and view reports
+The interface is responsive and works on both desktop and mobile devices.
+e. Security Measures
+The system implements several security measures to protect user data and ensure safe operation:
+Authentication:
+ Users must log in with email and password to access the system
+Password Encryption:
+ Passwords are encrypted before being stored in the database
+Role-Based Access Control:
+ Different roles (admin, user, staff) have different permissions
+Data Protection:
+ Sensitive data is protected from unauthorized access
+Session Management:
+ User sessions expire after a period of inactivity
+These measures ensure that the system is secure, reliable, and compliant with basic data protection standards.
