@@ -20,18 +20,10 @@ This test is an integration test because it runs with the Spring Boot applicatio
 
 4. Preparing Test Cases
 The test cases were designed to cover the most important booking situations. They include successful booking creation, duplicate booking prevention, available slot checking, cancellation, and invalid input cases. The goal was to make sure that the BookingService works correctly under normal and incorrect conditions.
-| Test ID | Scenario | Input | Expected Result |
-|---|---|---|---|
-| TC01 | Valid booking creation | Valid facility, future date, available time slot | Booking is created successfully with pending status and cash payment |
-| TC02 | Duplicate booking | Two users try to book the same facility, date, and time slot | Second booking is rejected with “This slot is already booked.” |
-| TC03 | Available slot check | One slot is already booked | Booked slot is removed from the available slots list |
-| TC04 | Booking cancellation | Citizen cancels an existing booking | Booking status becomes CANCELLED and the slot becomes available again |
-| TC05 | Invalid facility ID | Facility ID does not exist | Booking is rejected with “Facility not found” |
-| TC06 | Past booking date | Booking date is in the past | Booking is rejected because the date must be today or future |
-| TC07 | Null time slot | Time slot is not selected | Booking is rejected because the selected slot is not available |
-| TC08 | Empty time slot | Time slot is empty | Booking is rejected because the selected slot is not available |
-5. Writing Test Code
+<img width="1660" height="737" alt="image" src="https://github.com/user-attachments/assets/5c51f37f-1990-4fae-864a-0e20519f5d81" />
+<img width="1660" height="1085" alt="image" src="https://github.com/user-attachments/assets/c3dc8131-6f4f-4715-b5c6-ee122772b5b6" />
 
+5. Writing Test Code
 @SpringBootTest
 class BookingServiceIntegrationTest {
 
