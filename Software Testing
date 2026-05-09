@@ -1,10 +1,12 @@
 Task Overview: Choose 2-3 critical classes, or functions from your software, prepare comprehensive test cases, write the related test code, execute the tests, and document the results clearly in your report.
+
 1. Introduction to Testing
 ●	Define software testing as the process of evaluating software to identify defects, bugs, or unexpected behavior.
 Software testing is the process of evaluating a program or system to discover defects, bugs, or unexpected behavior. It involves running the software and observing how it performs in order to check whether it matches the expected results. In simple terms, testing is about making sure the software works the way it is supposed to.
 	
 ●	Highlight why testing is important in software development, especially for improving reliability, correctness, and maintainability.
 Testing is a crucial part of software development because it improves the overall quality of the product. It helps ensure reliability, meaning the system can be trusted to perform consistently. It also checks correctness by confirming that the software meets its requirements and functions properly. In addition, testing supports maintainability, since identifying and fixing issues early makes the software easier to update and manage in the future. Without proper testing, software may fail in real-world situations and create serious problems for users.
+
 2. Purpose of Testing
 ●	Explain that testing helps identify defects early in the development process.
 
@@ -13,6 +15,7 @@ The purpose of testing is to identify defects as early as possible in the develo
 ●	Show how testing verifies that software components behave as intended under expected and unexpected conditions.
 
 Testing also ensures that software behaves as intended. It verifies that each component works correctly under normal conditions and checks how the system reacts under unexpected situations, such as incorrect inputs or high usage. By doing this, testing not only confirms that the system meets its requirements but also improves its overall quality and reliability. In general, testing acts as a safeguard that helps developers deliver software that is stable, functional, and ready for real users. 
+
 3. Focus on Testing a Single Component - Booking Service
 The selected component for testing is the BookingService integration functionality. This component is important because it controls the main booking process of the sports facility system. It connects the citizen, facility, schedule, booking, and payment parts of the application. If this part does not work correctly, citizens may not be able to book a facility, or the system may allow incorrect bookings.
 The BookingService was selected because it has a direct effect on the main purpose of the system. It checks whether the facility exists, whether the selected date and time slot are valid, whether the slot is already booked, and whether the booking can be cancelled. It also creates the payment record and updates the available slots after a booking is cancelled.
@@ -350,10 +353,12 @@ class BookingServiceIntegrationTest {
         return schedule;
     }
 }
+
 6. Running Tests
 The tests were executed from IntelliJ IDEA by running the BookingServiceIntegrationTest class. They can also be executed from the terminal using the Maven command mvn test. When the tests pass, IntelliJ shows green check marks beside the test methods and the process finishes with exit code 0.
 For this test class, 8 integration test cases should be executed. A successful result means that all 8 tests passed without failures or errors. A failed result would mean that at least one expected result did not match the actual system behavior. An error would usually mean that the test could not run because of a setup, configuration, or database problem.
 <img width="940" height="246" alt="image" src="https://github.com/user-attachments/assets/18bf53ed-48d5-4200-9025-647f623df2a0" />
+
 7. Test Coverage
 The integration tests cover the most important paths of the BookingService. They test the successful booking path, the prevention of duplicate bookings, the checking of available slots, booking cancellation, and several invalid input cases. This gives confidence that the booking process works correctly with the database and related entities.
 The tests also cover important failure cases. These include invalid facility ID, past booking date, null time slot, and empty time slot. In each of these cases, the test confirms that the system rejects the request and does not save an incorrect booking in the database.
